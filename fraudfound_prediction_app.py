@@ -171,96 +171,101 @@ st.markdown(
 )
 
 # ======= Take Input Value To Predict =======
+with st.expander("🔧 Basic Info", expanded=True):
+    c1, space1, c2, space2, c3 = st.columns([5 , 1 , 5, 1 , 5])  
 
-s1 = st.number_input('Week Of Month :' , min_value=1, max_value=5)
-S1 = s1
+with c1:
+    s1 = st.number_input('Week Of Month :' , min_value=1, max_value=5)
+    S1 = s1
 
-s2 = st.selectbox('Day Of Week :', options=list(Dayofweek.keys()))
-S2 = Dayofweek[s2]
+    s2 = st.selectbox('Day Of Week :', options=list(Dayofweek.keys()))
+    S2 = Dayofweek[s2]
 
-s3= st.selectbox('Make :', options=list(make.keys()))
-S3 = make[s3]
+    s3= st.selectbox('Make :', options=list(make.keys()))
+    S3 = make[s3]
 
-s4 = st.selectbox('Accident Area :', options=list(accidentarea.keys()))
-S4 = accidentarea[s4]
+    s4 = st.selectbox('Accident Area :', options=list(accidentarea.keys()))
+    S4 = accidentarea[s4]
 
-s5 = st.selectbox('Day Of Week Claimed :', options=list(dayofweekclaimed.keys()))
-S5 = dayofweekclaimed[s5]
+    s5 = st.selectbox('Day Of Week Claimed :', options=list(dayofweekclaimed.keys()))
+    S5 = dayofweekclaimed[s5]
 
-s6 = st.number_input('Week Of Month Claimed :' , min_value=1, max_value=5)
-S6 = s6
+    s6 = st.number_input('Week Of Month Claimed :' , min_value=1, max_value=5)
+    S6 = s6
 
-s7 = st.selectbox('Sex :', options=list(sex.keys()))
-S7 = sex[s7]
+    s7 = st.selectbox('Sex :', options=list(sex.keys()))
+    S7 = sex[s7]
 
-s8 = st.selectbox('marital Status :', options=list(maritalstatus.keys()))
-S8 = maritalstatus[s8]
+    s8 = st.selectbox('marital Status :', options=list(maritalstatus.keys()))
+    S8 = maritalstatus[s8]
 
-s9 = st.number_input('Age :' , min_value=0, max_value=100)
-S9 = s9
+    s9 = st.number_input('Age :' , min_value=0, max_value=100)
+    S9 = s9
 
-s10 = st.selectbox('Fault :', options=list(fault.keys()))
-S10 = fault[s10]
+    s10 = st.selectbox('Fault :', options=list(fault.keys()))
+    S10 = fault[s10]
 
-s11 = st.selectbox('policy Type :', options=list(policytype.keys()))
-S11 = policytype[s11]
+with c2:
+    s11 = st.selectbox('policy Type :', options=list(policytype.keys()))
+    S11 = policytype[s11]
 
-s12 = st.selectbox('Vehicle Category :', options=list(vehiclecategory.keys()))
-S12 = vehiclecategory[s12]
+    s12 = st.selectbox('Vehicle Category :', options=list(vehiclecategory.keys()))
+    S12 = vehiclecategory[s12]
 
-s13 = st.selectbox('Vehicle Price :', options=list(vehicleprice.keys()))
-S13 = vehicleprice[s13]
+    s13 = st.selectbox('Vehicle Price :', options=list(vehicleprice.keys()))
+    S13 = vehicleprice[s13]
 
-s14 = st.number_input('Policy Number :' , min_value=1, max_value=15420)
-S14 = s14
+    s14 = st.number_input('Policy Number :' , min_value=1, max_value=15420)
+    S14 = s14
 
-s15 = st.number_input('RepNumber : ', min_value=1, max_value=100)
-S15 = s15
+    s15 = st.number_input('RepNumber : ', min_value=1, max_value=100)
+    S15 = s15
 
-s16 = st.number_input('Deductible (100 , 200 , 300 , .....) : ', min_value=0, max_value=10000)
-S16 = s16
+    s16 = st.number_input('Deductible (100 , 200 ...) : ', min_value=0, max_value=10000)
+    S16 = s16
 
-s17 = st.number_input('Driver Rating : ', min_value=1, max_value=4)
-S17 = s17
+    s17 = st.number_input('Driver Rating : ', min_value=1, max_value=4)
+    S17 = s17
 
-st18 = st.selectbox('Days Policy Accident :', options=list(days_policy_accident.keys()))
-S18 = days_policy_accident[st18]
+    st18 = st.selectbox('Days Policy Accident :', options=list(days_policy_accident.keys()))
+    S18 = days_policy_accident[st18]
 
-s19 = st.selectbox('Days Policy Claim :', options=list(days_policy_claim.keys()))
-S19 = days_policy_claim[s19]
+    s19 = st.selectbox('Days Policy Claim :', options=list(days_policy_claim.keys()))
+    S19 = days_policy_claim[s19]
 
-s20 = st.selectbox('Past Number Of Claims :', options=list(pastnumberofclaims.keys()))
-S20 = pastnumberofclaims[s20]
+    s20 = st.selectbox('Past Number Of Claims :', options=list(pastnumberofclaims.keys()))
+    S20 = pastnumberofclaims[s20]
 
-s21 = st.selectbox('Age Of Vehicle :', options=list(ageofvehicle.keys()))
-S21 = ageofvehicle[s21]
+with c3:
+    s21 = st.selectbox('Age Of Vehicle :', options=list(ageofvehicle.keys()))
+    S21 = ageofvehicle[s21]
 
-s22 = st.selectbox('Age Of Policy Holder :', options=list(ageofpolicyholder.keys()))
-S22 = ageofpolicyholder[s22]
+    s22 = st.selectbox('Age Of Policy Holder :', options=list(ageofpolicyholder.keys()))
+    S22 = ageofpolicyholder[s22]
 
-s23 = st.selectbox('Police Report Filed :', options=list(policereportfiled.keys()))
-S23 = policereportfiled[s23]
+    s23 = st.selectbox('Police Report Filed :', options=list(policereportfiled.keys()))
+    S23 = policereportfiled[s23]
 
-s24 = st.selectbox('Witness Present :', options=list(witnesspresent.keys()))
-S24 = witnesspresent[s24]
+    s24 = st.selectbox('Witness Present :', options=list(witnesspresent.keys()))
+    S24 = witnesspresent[s24]
 
-s25 = st.selectbox('Agent Type :', options=list(agenttype.keys()))
-S25 = agenttype[s25]
+    s25 = st.selectbox('Agent Type :', options=list(agenttype.keys()))
+    S25 = agenttype[s25]
 
-s26 = st.selectbox('Number Of Suppliments :', options=list(numberofsuppliments.keys()))
-S26 = numberofsuppliments[s26]
+    s26 = st.selectbox('Number Of Suppliments :', options=list(numberofsuppliments.keys()))
+    S26 = numberofsuppliments[s26]
 
-s27 = st.selectbox('Address Change Claim :', options=list(addresschange_claim.keys()))
-S27 = addresschange_claim[s27]
+    s27 = st.selectbox('Address Change Claim :', options=list(addresschange_claim.keys()))
+    S27 = addresschange_claim[s27]
 
-s28 = st.selectbox('Number Of Cars :', options=list(numberofcars.keys()))
-S28 = numberofcars[s28]
+    s28 = st.selectbox('Number Of Cars :', options=list(numberofcars.keys()))
+    S28 = numberofcars[s28]
 
-s29 = st.number_input('Year :', min_value=1990, max_value=2023)
-S29 = s29
+    s29 = st.number_input('Year :', min_value=1990, max_value=2023)
+    S29 = s29
 
-s30 = st.selectbox('Base Policy :', options=list(basepolicy.keys()))
-S30 = basepolicy[s30]
+    s30 = st.selectbox('Base Policy :', options=list(basepolicy.keys()))
+    S30 = basepolicy[s30]
 
 #============ 🟢 Create DataFrame for Input ==================
  
