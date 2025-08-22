@@ -388,9 +388,10 @@ with col2:
 # ============== Show Result ========================
 
 if predict_btn:
-    st.balloons()  # 🎈 Balloons effect
-
+    
     if result == 0:
+        st.balloons()  # 🎈 Balloons effect
+
         st.markdown(
             "<div class='result-box'>المطالبة ليست احتيالية (Claim Legit) ✅</div>",
             unsafe_allow_html=True
@@ -401,6 +402,8 @@ if predict_btn:
             st.image("1.png", width=900)
 
     elif result == 1:
+        st.balloons()  # 🎈 Balloons effect
+
         st.markdown(
             "<div class='result-box'>المطالبة احتيالية (Fraudulent Claim) ⚠️</div>",
             unsafe_allow_html=True
@@ -409,3 +412,4 @@ if predict_btn:
         col1, col2, col3 = st.columns([1,10,1])
         with col2:
             st.image("2.png", width=1200)
+
